@@ -33,6 +33,7 @@
     --breakpoint-xl: 1200px;
     --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
 }
 
 *,
@@ -364,7 +365,7 @@ template {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 4rem;
     font-family: inherit;
     font-weight: 500;
     line-height: 1.2;
@@ -376,7 +377,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-    font-size: 2rem;
+    font-size: 4rem;
 }
 
 h3, .h3 {
@@ -578,15 +579,38 @@ pre code {
     margin-left: auto;
 }
 
-@media (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
+.container-gallery {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+    height: 90%
 }
 
+.container-map {
+    width: 90%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+}
 @media (min-width: 768px) {
     .container {
         max-width: 720px;
+    }
+    .container-gallery {
+        max-width: 600px;
+        height: 90%
+    }
+    .container-map {
+        max-width: 600px;
     }
 }
 
@@ -594,21 +618,48 @@ pre code {
     .container {
         max-width: 960px;
     }
+    .container-gallery {
+        max-width: 600px;
+        height: 90%
+    }
+    .container-map {
+        max-width: 600px;
+    }
 }
 
 @media (min-width: 1200px) {
     .container {
         max-width: 1140px;
     }
+    .container-gallery {
+        max-width: 600px;
+        height: 90%
+    }
+    .container-map {
+        max-width: 600px;
+    }
 }
 
-.container-fluid {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+@media (min-height: 768px) {
+    .container-gallery {
+        max-width: 450px;
+    }
+    .container-map {
+        max-width: 450px;
+    }
 }
+@media (min-height: 992px) {
+    .container-gallery {
+        max-width: 600px;
+    }
+    .container-map {
+        max-width: 600px;
+    }
+}
+
+
+
+/* min-height: calc(100% - (0.5rem * 2)); */
 
 .row {
     display: -webkit-box;
@@ -8025,12 +8076,6 @@ button.bg-dark:focus {
     margin: 3rem !important;
 }
 
-.mt-5,
-.my-5 {
-    margin-top: 3rem !important;
-}
-
-.mr-5,
 .mx-5 {
     margin-right: 3rem !important;
 }
@@ -9756,18 +9801,19 @@ body {
 
 /* Home Page Style */
 .ww-home-page {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/main-background_resize.jpeg") no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/main-back_resize.jpg") no-repeat center center;
     background-size: cover;
     background-position: 50%;
     height: 100vh;
     min-height: 480px;
+/*    min-height: 480px;*/
 }
 
 .ww-home-page .ww-wedding-announcement {
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
-    height: 140%;
+    height: 50%;
     text-align: center;
     color: #fff;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
@@ -9793,12 +9839,26 @@ body {
 }
 
 .ww-home-page .ww-wedding-announcement .ww-couple-name {
-    font-size: 70px;
+    font-size: 60px;
+    margin-bottom: 50%;
 }
 
 @media (max-width: 576px) {
     .ww-home-page .ww-wedding-announcement .ww-couple-name {
-        font-size: 50px;
+        font-size: 35px;
+        margin-bottom: 40%;
+    }
+}
+@media (max-width: 360px) {
+    .ww-home-page .ww-wedding-announcement .ww-couple-name {
+        font-size: 30px;
+        margin-bottom: 30%;
+    }
+}
+@media (max-width: 280px) {
+    .ww-home-page .ww-wedding-announcement .ww-couple-name {
+        font-size: 20px;
+        margin-bottom: 30%;
     }
 }
 
@@ -10058,4 +10118,19 @@ body {
     bottom: 0;
     left: 0;
     margin: 0px 15px 15px 15px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 30%;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
 }

@@ -396,7 +396,8 @@ a:hover, a:active, a:focus {
 }
 
 p {
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
+  margin-top: 0.5em;
   font-family: 'GowunDodum', serif;;
 }
 
@@ -647,7 +648,7 @@ h1, h2, h3, h4, h5, h6 {
 #qbootstrap-people,
 #qbootstrap-when-where,
 #qbootstrap-started,
-#qbootstrap-gallery,
+/*#qbootstrap-gallery,*/
 #qbootstrap-testimonials,
 #qbootstrap-press {
   padding: 7em 0;
@@ -660,12 +661,42 @@ h1, h2, h3, h4, h5, h6 {
   #qbootstrap-people,
   #qbootstrap-when-where,
   #qbootstrap-started,
-  #qbootstrap-gallery,
+/*  #qbootstrap-gallery,*/
   #qbootstrap-testimonials,
   #qbootstrap-press {
     padding: 20px 0;
   }
 }
+@media screen and (min-width: 576px) {
+  #qbootstrap-countdown {
+    max-width: 540px;
+    left: 50%;         /* 가로로 중앙에서 시작 */
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 768px) {
+  #qbootstrap-countdown {
+    max-width: 720px;
+    left: 50%;         /* 가로로 중앙에서 시작 */
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 992px) {
+  #qbootstrap-countdown {
+    max-width: 960px;
+    left: 50%;         /* 가로로 중앙에서 시작 */
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #qbootstrap-countdown {
+    max-width: 1140px;
+    left: 50%;         /* 가로로 중앙에서 시작 */
+    transform: translateX(-50%);
+  }
+}
+
 
 .qbootstrap-bg {
   background: rgba(0, 0, 0, 0.03);
@@ -1019,6 +1050,7 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   z-index: 0;
   width: 100%;
+  height: 25%;
 }
 #qbootstrap-countdown .section-heading {
   margin-bottom: 0 !important;
@@ -1056,11 +1088,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 #qbootstrap-countdown .countdown {
   margin-bottom: 0;
-  font-size: 30px;
+  font-size: 25px;
   color: #fff;
 }
 #qbootstrap-countdown .countdown span {
-  margin: 0 20px;
+  margin: 0 5px;
   display: inline-block;
   font-family: "GowunDodum", cursive;
 }
@@ -2086,9 +2118,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .accordion-button.collapsed {
   background: rgba(245, 245, 245, 1);
+  border: 0px;
 }
 .accordion-button:not(.collapsed) {
   color: black;
+  border: 0px;
   background: rgba(245, 245, 245, 1);
 }
 .accordion-header-text{
